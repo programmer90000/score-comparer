@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA Scores Comparer Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FIFA Scores Table</h1>
+    </header>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <td>Position</td>
+                <td>Player</td>
+                <td>Games Played</td>
+                <td>Won</td>
+                <td>Drew</td>
+                <td>Lost</td>
+                <td>Goals For</td>
+                <td>Goals Against</td>
+                <td>Goal Difference</td>
+                <td>Points</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td id="player1"></td>
+                <td class="gamesPlayed"></td>
+                <td id="person1Wins"></td>
+                <td class="draw"></td>
+                <td id="person1Losses"></td>
+                <td id="person1GoalsFor"></td>
+                <td id="person1GoalsAgainst"></td>
+                <td id="person1GoalDifference"></td>
+                <td id="person1Points"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td id="player2"></td>
+                <td class="gamesPlayed"></td>
+                <td id="person2Wins"></td>
+                <td class="draw"></td>
+                <td id="person2Losses"></td>
+                <td id="person2GoalsFor"></td>
+                <td id="person2GoalsAgainst"></td>
+                <td id="person2GoalDifference"></td>
+                <td id="person2Points"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <label id="fileUpload">
+        <input type="file">
+        Upload File
+    </label>
+
+    <div id="scores-not-processed"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
