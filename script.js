@@ -17,15 +17,20 @@ function convertTextToCSV(file, callback) {
         for (let i = 0; i < lines.length; i++) {
             let line = lines[i].trim();
 
+            
+
             if (line.length > 0) {
                 let colonIndex = line.indexOf(':', line.indexOf(':') + 1);
                 let lineContent = colonIndex !== -1 ? line.slice(colonIndex + 1).trim() : line;
 
                 lineContent = lineContent.match(/\d+/g);
+                if (lineContent !== null && lineContent.length === 2 || lineContent != null && lineContent.length === 4) {
 
                 let parsedNumbers = lineContent.map(function (string) {
                     return parseInt(string, 10); // Turn the String into a Number using the Base 10 System
                 });
+                if (parsedNumbers[0].toString().length === 1 && parsedNumbers[1].toString().length === 1) {
+
 
                 person_1_goals += parsedNumbers[0];
                 person_2_goals += parsedNumbers[1];
@@ -45,7 +50,13 @@ function convertTextToCSV(file, callback) {
                 }
                 all_scores.push(parsedNumbers);
             }
+        } else {
+          if (lineContent !== null) {
+            console.log(lineContent);
+          } 
+
         }
+      }};
 
         let first_person_points = (person_1_wins * 3) + draw;
         let second_person_points = (person_2_wins * 3) + draw;
