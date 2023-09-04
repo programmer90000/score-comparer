@@ -54,7 +54,10 @@ label#fileUpload {
 }
 
 #scores-not-processed {
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 40px;
     margin: 20px;
     text-align: center;
 }
